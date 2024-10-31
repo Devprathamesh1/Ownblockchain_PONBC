@@ -1,0 +1,56 @@
+declare -gx DIRENV_CONFIG=/etc/direnv
+declare -gx REPL_OWNER_ID=37271062
+declare -gx REPL_ID=82353199-4d94-4663-bac6-9be11128a4d0
+declare -gx REPLIT_SUBCLUSTER=interactive
+declare -gx NIX_PATH=nixpkgs=/home/runner/.nix-defexpr/channels/nixpkgs-stable-23_11:/home/runner/.nix-defexpr/channels
+declare -gx REPLIT_BASHRC=/nix/store/vxzp0jk1x0l6w6v1xhq7fi9rrw2jf2zj-replit-bashrc/bashrc
+declare -gx REPLIT_DB_URL=https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3Mjk2ODQ0MDEsImlhdCI6MTcyOTU3MjgwMSwiZGF0YWJhc2VfaWQiOiI4MjM1MzE5OS00ZDk0LTQ2NjMtYmFjNi05YmUxMTEyOGE0ZDAifQ.xgKIlG05Y-cdj2xLlha5Br4UJ_FQkcDnclR2_avKbbbWOz7dm2gjsGgqiNtKr9WF0mvSbKL_oJEXSAlC-oWq7g
+declare -gx REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+read -r _new_path <<< "/nix/store/gjniy215m60fq1ix0yh026ss8gfgcq69-npx/bin:/home/runner/SturdyMealyNaturaldocs/.config/npm/node_global/bin:/home/runner/SturdyMealyNaturaldocs/node_modules/.bin:/nix/store/5kk9h132i0cppcnqfsq06shjdxk1jm5j-nodejs-20.16.0-wrapped/bin:/nix/store/9rgymxmyijhvky204q0hir162kn8fh7i-bun-1.1.30/bin:/nix/store/0r10s324j8flxf8p70h3d9d1bzs1hzpm-pnpm-9.9.0/bin:/nix/store/gjym9dkyscad5xjxv1pnq3dv7256ngfc-yarn-1.22.22/bin:/nix/store/zmka8ia4s3ssab264js8yppk02lp6lz4-prettier-3.3.3/bin:/nix/store/9dr7v6h94vyza792q4mbgip6brx0ba6k-pid1/bin:/nix/store/hwdq0iz2rbdb9fj6vrycx23zvnn82428-replit-runtime-path/bin:/home/runner/.nix-profile/bin:/home/runner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#PATH=/nix/store/gjniy215m60fq1ix0yh026ss8gfgcq69-npx/bin:/home/runner/SturdyMealyNaturaldocs/.config/npm/node_global/bin:/home/runner/SturdyMealyNaturaldocs/node_modules/.bin:/nix/store/5kk9h132i0cppcnqfsq06shjdxk1jm5j-nodejs-20.16.0-wrapped/bin:/nix/store/9rgymxmyijhvky204q0hir162kn8fh7i-bun-1.1.30/bin:/nix/store/0r10s324j8flxf8p70h3d9d1bzs1hzpm-pnpm-9.9.0/bin:/nix/store/gjym9dkyscad5xjxv1pnq3dv7256ngfc-yarn-1.22.22/bin:/nix/store/zmka8ia4s3ssab264js8yppk02lp6lz4-prettier-3.3.3/bin:/nix/store/9dr7v6h94vyza792q4mbgip6brx0ba6k-pid1/bin:/nix/store/hwdq0iz2rbdb9fj6vrycx23zvnn82428-replit-runtime-path/bin:/home/runner/.nix-profile/bin:/home/runner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+if [ -e "/run/replit/env/last" ]; then read -r _last_path < <(\grep '^#PATH=' /run/replit/env/last | cut -f 2 -d =); fi
+_user_components="$(\tr : $'\n' <<< "${PATH:-}" |\grep -xv -f <(\tr : $'\n' <<< "${_last_path}") |\tr $'\n' :)"
+declare -gx PATH="${_user_components}${_new_path}"
+declare -gx REPLIT_ENVIRONMENT=production
+declare -gx REPLIT_RTLD_LOADER=1
+declare -gx HOSTNAME=f74f0827ab90
+declare -gx PROMPT_DIRTRIM=2
+declare -gx REPL_LANGUAGE=html
+declare -gx REPLIT_NIX_CHANNEL=stable-23_11
+declare -gx SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+declare -gx REPL_PUBKEYS='{"crosis-ci":"7YlpcYh82oR9NSTtSYtR5jDL4onNzCGJGq6b+9CuZII=","crosis-ci:1":"7YlpcYh82oR9NSTtSYtR5jDL4onNzCGJGq6b+9CuZII=","crosis-ci:latest":"7YlpcYh82oR9NSTtSYtR5jDL4onNzCGJGq6b+9CuZII=","prod":"tGsjlu/BJvWTgvMaX7acuUb7AO1dXOrRiuk7y083RFE=","prod:1":"tGsjlu/BJvWTgvMaX7acuUb7AO1dXOrRiuk7y083RFE=","prod:2":"8uGN+vfszlnV93/HCSHlVLG0xddMlPkir1Ni4JKT4+w=","prod:3":"9+MCOSHQSQlcodXoot8dC8NLhc862nLkx1/VMsbY2h8=","prod:4":"8uGN+vfszlnV93/HCSHlVLG0xddMlPkir1Ni4JKT4+w=","prod:5":"9+MCOSHQSQlcodXoot8dC8NLhc862nLkx1/VMsbY2h8=","prod:latest":"tGsjlu/BJvWTgvMaX7acuUb7AO1dXOrRiuk7y083RFE=","vault-goval-token":"D5jJoMx1Ml54HM92NLgXl+MzptwDqbSsfyFG6f52g9E=","vault-goval-token:1":"D5jJoMx1Ml54HM92NLgXl+MzptwDqbSsfyFG6f52g9E=","vault-goval-token:latest":"D5jJoMx1Ml54HM92NLgXl+MzptwDqbSsfyFG6f52g9E="}'
+declare -gx LIBGL_DRIVERS_PATH=/nix/store/zxhjnh2d440bhli0zck18s10hcq07qpp-mesa-24.2.2-drivers/lib/dri
+declare -gx XDG_CACHE_HOME=/home/runner/SturdyMealyNaturaldocs/.cache
+declare -gx COLORTERM=truecolor
+declare -gx REPL_IMAGE=gcr.io/marine-cycle-160323/nix:bf8590a3e2f0a8b70b7ca175eeed9074dffbfca9
+declare -gx REPLIT_PID1_FLAG_REPLIT_RTLD_LOADER=1
+declare -gx DENO_TLS_CA_STORE=system
+declare -gx REPLIT_RIPPKGS_INDICES=/nix/store/73awzgwmrga8y0dl84cp30h40965wyk5-rippkgs-indices
+declare -gx __EGL_VENDOR_LIBRARY_FILENAMES=/nix/store/zxhjnh2d440bhli0zck18s10hcq07qpp-mesa-24.2.2-drivers/share/glvnd/egl_vendor.d/50_mesa.json
+declare -gx NIX_PROFILES='/nix/var/nix/profiles/default /home/runner/.nix-profile'
+declare -gx REPL_OWNER=prathameshbotwe
+declare -gx GIT_EDITOR=replit-git-editor
+declare -gx REPLIT_LD_AUDIT=/nix/store/n5x1kgbz8zjh63ymsijbislyi1n1hir6-replit_rtld_loader-1/rtld_loader.so
+declare -gx REPL_SLUG=SturdyMealyNaturaldocs
+declare -gx REPLIT_DOMAINS=82353199-4d94-4663-bac6-9be11128a4d0-00-393zxxhtb64yk.sisko.replit.dev
+declare -gx REPLIT_PID1_FLAG_NIXMODULES_BEFORE_REPLIT_NIX=1
+declare -gx REPL_IDENTITY=v2.public.Q2lRNE1qTTFNekU1T1MwMFpEazBMVFEyTmpNdFltRmpOaTA1WW1VeE1URXlPR0UwWkRBU0QzQnlZWFJvWVcxbGMyaGliM1IzWlJvV1UzUjFjbVI1VFdWaGJIbE9ZWFIxY21Gc1pHOWpjeUlrT0RJek5UTXhPVGt0TkdRNU5DMDBOall6TFdKaFl6WXRPV0psTVRFeE1qaGhOR1F3T0piczRoRmFGQW9GYzJsemEyOFNDMmx1ZEdWeVlXTjBhWFps4cS2C73J2vHuEelM47dvaKHNr4YoQ3HzTI8cAI-UO1EQB_lHgJ9gWBqPAPv1hZDLCdYRyHD5dy4WrmTIAisUBg.R0FFaUJtTnZibTFoYmhLYkNIWXlMbkIxWW14cFl5NVJNbVF6VTFoT01Fd3lUakZSVm14U1lrVjRkV1JxUm01U1ZrNUZVVmRzUTAxVk9WUk9SVXB2VWtVeE1sUjVPVmhSVmtwMlVUQmtRbFpYUmt0YU1qbHlWREJTU21Wck5WVlVXR2hRVmtkME1GUnJaRkpPVlRWRVRVUkNUMkZzYkRaVVJtUkxZVVpzTmxkWVVsQldNSEJ6VkZaU1JtVkZNWEZoUjJoUFVqRkdNMUl5YUVaVk1GRjZVVzVzV2xkR1NuWlhWbU40WWtkTmVXRkhiR2xOTVVsNlYyeEtkbEpyT1V0WmJrMHdZVVZXYUZGdWJFcFNiVTE1WWtod2FFMXFhR2hTUms1MlZFZEdXRTVVUW1GWFJYQnZWMVJPVTJOSFVuUldWMnhQVmpOT05WUkhOVU5OVm14MFpVaENXbVZVVVRCYVZ6VnVUVmRGZDJSRVFsSldNbEpSV1d4YVZrNUdaSFZoUldocFZsVndjbHBGWkhkalYwNVpVbGhzVFZaWGFGRmFSelZYVlZad1YxTnNhRmxsYTFwWVYycEtTbVF5Um5WaWVsTjZXbE16VmsxTlZXRnBjR05ZVDI1a1V5MHpZbWRXYjBwWE1VWnpTVTl0Um1vMk1ESkVSVFZoTmtaeVMxQm5XalpXVDBsQlNsOTFjRmxoUVhwVGRreGZaWGwxUW1oVVREQnNkbVJsT1VoSmVrRmpOR3RJTGxJd1JrWmhWVXAwVkc1YWFXSlVSbTlaYldoTldXdEdkVmRZYkUxaWEwbDRWMWN4TkdOR2JEVk9Wa3BPWWxaSk1sWlVSbXROUjFaMFUyeGFWR0p1UWxkV2JURTBWVEZTY2xWdFJrNVdia0pYVlRKMFQxWkdXbGxoUlZaV1pXdEtjbFZxUVRGVFZrWnlVMnhhVGxKc2NGTldiWEJQV1ZkU1YySXphRk5pVjJoVFZtcEtiMlJXVmxoa1IzUnBZa1UxV0ZsclZrOVdiVXBWWWtWV1ZtRnJTa2hhUjNoelZteEtkVkpzU2xkV1dFSktWakp3UTJNeFpITlNiR2hvVTBad1UxUlZaRk5STVZwSFdrVmtVbUpWV2tsWGExVjRWVEF4ZEZWcmRGZE5WbHBVVlZSS1NtUXhVbkpoUmtwWFlURndkbFpXV210aU1rcHpWRzVLYVZORldsaFpiWFIzVkRGc1YxVnNaRTVOV0VKSVYydFdNR0ZyTVhKWGJHeFhVbTFvV0ZaRVJtRmtSMVpKWTBaa1YySldTa2xXUmxKTFZESk5lVk5xV2xaaGVteFlWRmQ0UzJJeFdYbE5WRkpVVFd0YVIxUldWbXRXUjBwR1YyeGFXbFo2UlRCWFZscHpUbXhHVlZKdGNHbFNXRUkyVmtSR1YxbFhSWGxUYkd4V1ZrVmFWMWxyV21GamJIQklaVVZhYkZKdVFrWldNakYzWVVkRmVHTkhPVmRoYTFwVVZYcEdUbVZHV25OVGJFWlhVa1ZLTTFZeWRHRlhiVTUwWTBVeFVGZEZOSHBhUlZaYVRsWndSVkpZVW1saVZGWlJWREJrWVZWdFNsaGhSRXBVVWxad2VGWnJWbkprUjFKRllVVndhV0pXY0ZGWFJFbDRWbFV4ZEZsNlVtcFhTRUpHVld0a1ZrNUdXa1ZpUmxKb1RWWktObGR0ZUc5aVYxWnlZbnBDV0ZaVk1UWlhiWE4zWld4a1ZrNVlTbFJXUjFKWlYxZHJkMDVXU25KVmJUbFBZVlJHVEZScVNUVlNSWGh6VTFoa1UyRXhjRzlXYkZaM1RVWmFTRTVYUm1oV01IQldWVzB3TlZkdFNsaFZha3BXWVd0d1VGVXhXazlrVm1SMFVteE9VMlZ0WnpBPQ
+declare -gx XDG_CONFIG_HOME=/home/runner/SturdyMealyNaturaldocs/.config
+declare -gx REPLIT_CLI=/nix/store/b70yb92xvpgd8p40bgw1h6bqifzcgjzd-pid1-0.0.1/bin/replit
+declare -gx REPL_HOME=/home/runner/SturdyMealyNaturaldocs
+declare -gx GIT_ASKPASS=replit-git-askpass
+declare -gx REPLIT_PID1_VERSION=0.0.0-16454ab
+declare -gx LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+declare -gx XDG_DATA_HOME=/home/runner/SturdyMealyNaturaldocs/.local/share
+declare -gx USER=runner
+declare -gx DISPLAY=:0
+declare -gx REPL_IDENTITY_KEY=k2.secret.glvmoh2g-g_3wYSiXN7WzrMrxuASS7zHH-NAOHZyirbzPHmQq0CA6ZTxnEaYF22OOqrb4c6-495Fb_VWBvSPPw
+declare -gx REPLIT_CLUSTER=sisko
+declare -gx REPLIT_DEV_DOMAIN=82353199-4d94-4663-bac6-9be11128a4d0-00-393zxxhtb64yk.sisko.replit.dev
+declare -gx DOCKER_CONFIG=/home/runner/SturdyMealyNaturaldocs/.config/docker
+declare -gx npm_config_prefix=/home/runner/SturdyMealyNaturaldocs/.config/npm/node_global
+declare -gx NIXPKGS_ALLOW_UNFREE=1
+declare -gx NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt
+declare -gx HOME=/home/runner
+declare -gx LANG=en_US.UTF-8
+declare -gx NIX_PS1='\[\033[01;34m\]\w\[\033[00m\]\$ '
